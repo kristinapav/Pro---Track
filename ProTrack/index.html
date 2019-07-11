@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Pro-Track</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="active">
+            
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#" id="timer">
+                        <i class="far fa-clock"></i>
+                        Pomodoro Timer
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="to-do">
+                        <i class="fas fa-tasks"></i>
+                        To-Do List
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="notes">
+                        <i class="far fa-sticky-note"></i>
+                        Notes
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" id="history">
+                        <i class="fas fa-chart-bar"></i>
+                        History
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <!-- Page Content  -->
+            <div id="content">
+                <!-- Top Page Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <!-- Menu button -->
+                            <button class="btn btn-primary sm" id="sidebarCollapse">
+                                <i id="menu-icon"></i>
+                            </button>
+        
+                        <!-- User disabled buttons -->
+                        <div class="conatainer-fluid">
+                            <button type="button" class="btn btn-secondary btn-sm" id="btn-disabled">
+                                Log In
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="btn-disabled" >
+                                Sign Up
+                            </button>
+                        </div>
+                        <!-- /Top Page Nav Bar -->
+                    </div>
+                </nav>
+
+                <!-- Pomodoro Timer -->
+                <div id="pomodoro-content" class="active">
+
+                    <!-- circle -->
+                    <div class="container-fluid timer-wrapper">
+                        <div id="display-time" class="timer"></div>
+                        <!--/ circle -->
+
+                        <!-- Pomodoro buttons -->
+                        <div class="timer-btn">
+                            <button id="start" class="btn btn-primary" data-time="1000"><i class="fas fa-play"></i></button>
+                            <button id="pause" class="btn btn-primary"><i class="fas fa-pause"></i></button>
+                            <button id="stop" class="btn btn-primary"><i class="fas fa-stop"></i></button>
+                            <button  id="break" data-time="300" class="btn btn-primary">Break</button>
+                        </div>
+                        <!-- /pomodoro btns -->
+                    </div>
+                </div>
+                <!-- / Pomodoro-Timer-->
+
+                <!-- To Do -->
+                <div id="to-do-content">
+                    <div class="row" style="justify-content: center">
+                        <div class="col-8 add-task-line">
+                            <div class="add-task-input-wrapper">
+                                <input type="text" id="task-value" class="form-control" placeholder="What you need to do?">
+                                <i id="clear-value" class="fas fa-times"></i>
+                            </div>
+                            <button id="add-task-btn" class="btn btn-light-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="row" style="justify-content: center">
+                        <div class="col-8">
+                            <ul id="tasks" class="form-check"></ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- / To-Do -->
+
+                <!-- Notes -->
+                 <div id="notes-content">
+                    <div class="row" style="justify-content: center">
+                        <div class="col-8 add-note-line">
+                            <div class="add-note-wrapper">
+                                <textarea class="textarea-form" placeholder="Take a note.." rows="5"></textarea>
+                                <button class="btn btn-primary add-note-btn">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 note-list"></div>
+                </div>
+                <!-- / notes -->
+
+                <!-- History -->
+                <div class="col-12" id="history-content">
+                    <h3>History - in progress</h3>
+                </div>
+            </div>
+
+            <!-- Footer menu -->
+            <footer class="footer">
+                <span>Copyright © 2019 ProTrack</span>
+            </footer>
+            <!-- /footer menu -->
+        </div>
+
+        <!-- Libs -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+        <!-- Pro-Track scripts -->
+        <script src="js/main.js"></script>
+        <script src="js/pomodoro.js"></script>
+        <script src="js/to-do.js"></script>
+        <script src="js/notes.js"></script>
+        <script src="js/history.js"></script>
+        
+</body>
+
+</html>
